@@ -1,0 +1,217 @@
+/* LandingPage.css */
+.landing-page {
+    transition: opacity 300ms ease-in-out;
+    font-family: Arial, sans-serif;
+}
+
+.landing-page.fade-out {
+    opacity: 0;
+}
+  
+  /* Header styles */
+  .header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: rgba(42, 42, 114, 0.5); /* Semi-transparent background */
+    backdrop-filter: blur(10px); /* Blur effect */
+    color: white;
+    padding: 10px 40px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Optional: Subtle shadow */
+    position: relative; /* Establish positioning context */
+    z-index: 10; /* Ensure header is above other elements */
+  }
+  
+  /* Left section styles */
+  .header-left {
+    display: flex; /* Align logo and title */
+    align-items: center; /* Center vertically */
+}
+
+.header-left img.logo {
+    border-radius: 9px;
+    height: 25px; /* Adjust logo height */
+    margin-right: 5px; /* Space between logo and title */
+}
+
+.header-left .title {
+    font-size: 24px; /* Adjusted font size */
+    margin: 0; /* Ensure there's no margin */
+}
+  
+  /* Center navigation styles */
+  .header-center {
+    display: flex;
+    gap: 20px; /* Space between links */
+  }
+  
+  .header-center a {
+    margin: 0 15px;
+    color: white;
+    text-decoration: none;
+    opacity: 1; /* Start fully visible */
+    transition: opacity 300ms ease; /* Transition for opacity */
+}
+
+.header-center a:hover {
+    color: #000000; /* Change link color on hover */
+    opacity: 0.8; /* Ensure it's fully visible on hover */
+    font-weight: 600;
+}
+
+/* Dropdown container */
+.dropdown {
+    position: relative;
+    display: inline-block;
+  }
+  
+  .dropbtn {
+    background-color: transparent;
+    border: none;
+    color: #ffffff; /* Button color */
+    font-weight: 500; /* Button font weight */
+    cursor: pointer;
+    padding: 10px 15px; /* Padding for dropdown button */
+  }
+  
+  /* Dropdown content */
+  .dropdown-content {
+    display: block;
+    position: absolute;
+    background-color: transparent; /* Semi-transparent background for dropdown */
+    backdrop-filter: blur(10px); /* Apply blur to dropdown */
+    min-width: 160px; /* Minimum width for dropdown */
+    z-index: 1; /* Ensure it appears above other elements */
+    border-radius: 10px; /* Rounded corners */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.632); /* Shadow for dropdown */
+  }
+  
+  .dropdown-content a {
+    color: #ffffff; /* Link color */
+    padding: 12px 16px; /* Padding for links */
+    text-decoration: none; /* No underline */
+    display: block; /* Links occupy full width */
+  }
+  
+  .dropdown-content a:hover {
+    background-color: rgba(40, 167, 70, 0.363); 
+    color: #00ff1a;
+  }
+  
+  
+  /* Right section styles */
+  .header-right {
+    display: flex;
+    align-items: center;
+  }
+  
+  .get-started-button {
+    padding: 10px 20px;
+    font-size: 16px;
+    background-color: #28a745; /* Button background color */
+    color: white; /* Button text color */
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+  }
+  
+  .get-started-button:hover {
+    background-color: #218838; /* Darker button color on hover */
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2); /* Add shadow effect */
+    transform: scale(1.05); /* Slightly scale up the button */
+    opacity: .7; /* Ensure it's fully visible on hover */
+}
+  
+  /* Responsive styles */
+  @media (max-width: 768px) {
+    .header {
+      flex-direction: column;
+      align-items:self-start;
+    }
+  
+    .header-center {
+      flex-wrap: wrap;
+      margin: 10px 0;
+    }
+  
+    .header-center a {
+      margin: 5px 0; /* Space between links on mobile */
+    }
+  
+    .header-left {
+      margin-bottom: 10px; /* Space below header-left on mobile */
+    }
+  
+    .title {
+      font-size: 20px; /* Smaller title size on mobile */
+    }
+  }
+  
+  @media (max-width: 480px) {
+    .logo {
+      width: 40px; /* Smaller logo size on extra small screens */
+    }
+  
+    .title {
+      font-size: 18px; /* Further reduced title size */
+    }
+  
+    .get-started-button {
+      font-size: 14px; /* Smaller button text on extra small screens */
+    }
+  }
+  
+
+.main-content {
+    display: flex;
+    flex-direction: column;
+    gap: 0px; /* Space between sections */
+}
+
+.section {
+    display: flex;
+    flex-direction: column; /* Stack children vertically */
+    justify-content: center; /* Center vertically */
+    align-items: center; /* Center horizontally */
+    min-height: 531px; /* Adjust as needed */
+    padding: 20px; /* Inner padding */
+}
+
+
+.section1 {
+    background-image: url('../pictures/sec.avif'); /* Adjust path */
+    background-size: cover;
+    background-position: center;
+    padding: 100px 20px; /* Keep increased padding */
+    color: white;
+    text-align: center;
+    position: relative; /* Establish positioning context */
+    margin-top: -50px; /* Pull section up to overlap header */
+    z-index: 5; /* Lower than header */
+}
+
+.section1 .title {
+    font-size: 48px; /* Adjust title font size */
+    margin: 0; /* Remove margin */
+    line-height: 1.2; /* Adjust line height for better readability */
+}
+
+.section1 .title span {
+    display: block; /* Stack each word on a new line */
+}
+
+.section1 .description {
+    font-size: 20px; /* Adjust description font size */
+    max-width: 800px; /* Limit the width for better readability */
+    margin: 20px auto; /* Center with margin on top and bottom */
+    line-height: 1.5; /* Adjust line height for better readability */
+    text-align: center; /* Center the description text */
+}
+
+.footer {
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 20px;
+}

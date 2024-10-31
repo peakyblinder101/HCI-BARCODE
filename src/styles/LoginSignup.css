@@ -1,0 +1,80 @@
+
+.container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center; /* Center vertically */
+  align-items: center; /* Center horizontally */
+  min-height: 100vh; /* Ensure it takes full height */
+ /*padding: 40px; /* Increase padding for more space */
+  margin: 0; /* Remove margin */
+  width: 100vw; /* Full width of the viewport */
+  height: 100vh; /* Full height of the viewport */
+  border: 0; /* Remove border */
+  border-radius: 5px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  background-image: url('../pictures/back.avif'); /* Background image */
+  background-size: cover; /* Make background image cover the container */
+  background-position: center; /* Center the background image */
+  background-repeat: no-repeat; /* Prevent image repetition */
+}
+
+
+
+.switch {
+  text-align: center;
+  margin-top: 15px;
+  color: black; /* Default color for switch text */
+  font-weight: 400; /* Make it slightly bold */
+  cursor: pointer;
+}
+
+.password-container {
+  position: relative;
+  width: 100%;
+}
+
+.password-container input {
+  width: calc(100% - 30px); /* Adjust to leave space for the icon */
+}
+
+.password-container span {
+  position: absolute;
+  right: 10px;
+  top: 50%;
+  transform: translateY(-50%);
+  cursor: pointer;
+}
+
+.link {
+  color: blue; /* Blue color for the links */
+  font-weight: normal; /* Normal weight for links */
+}
+
+/* Updated Animation styles for 3D effect */
+.slide-enter {
+  transform: rotateY(90deg) translateX(100%); /* Start from the right */
+  opacity: 0; /* Start invisible */
+}
+
+.slide-enter-active {
+  transform: rotateY(0deg) translateX(0); /* Slide into place */
+  opacity: 1; /* Fully visible */
+  transition: transform 300ms ease-in-out, opacity 300ms ease-in-out;
+}
+
+.slide-exit {
+  transform: rotateY(0deg) translateX(0); /* Start in place */
+  opacity: 1; /* Fully visible */
+}
+
+.slide-exit-active {
+  transform: rotateY(-90deg) translateX(-100%); /* Slide out to the left */
+  opacity: 0; /* Fade out */
+  transition: transform 300ms ease-in-out, opacity 300ms ease-in-out;
+}
+
+.slide-exit-active-right {
+  transform: rotateY(90deg) translateX(100%); /* Slide out to the right */
+  opacity: 0; /* Fade out */
+  transition: transform 300ms ease-in-out, opacity 300ms ease-in-out;
+}

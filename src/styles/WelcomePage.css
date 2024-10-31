@@ -1,0 +1,552 @@
+/* WelcomePage.css */
+.welcome-page {
+    transition: opacity 300ms ease-in-out;
+    font-family: Arial, sans-serif;
+}
+
+.welcome-page.fade-out {
+    opacity: 0;
+}
+
+  
+  /* Header styles */
+  .header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: rgba(42, 42, 114, 0.5); /* Semi-transparent background */
+    backdrop-filter: blur(10px); /* Blur effect */
+    color: white;
+    padding: 10px 40px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Optional: Subtle shadow */
+    position: relative; /* Establish positioning context */
+    z-index: 10; /* Ensure header is above other elements */
+  }
+  
+  /* Left section styles */
+  .header-left {
+    display: flex; /* Align logo and title */
+    align-items: center; /* Center vertically */
+}
+
+.header-left img.logo {
+    border-radius: 9px;
+    height: 25px; /* Adjust logo height */
+    margin-right: 5px; /* Space between logo and title */
+}
+
+.header-left .title {
+    font-size: 24px; /* Adjusted font size */
+    margin: 0; /* Ensure there's no margin */
+}
+  
+  /* Center navigation styles */
+  .header-center {
+    display: flex;
+    gap: 20px; /* Space between links */
+  }
+  
+  .header-center a {
+    margin: 0 15px;
+    color: white;
+    text-decoration: none;
+    opacity: 1; /* Start fully visible */
+    transition: opacity 300ms ease; /* Transition for opacity */
+}
+
+.header-center a:hover {
+    color: #000000; /* Change link color on hover */
+    opacity: 0.8; /* Ensure it's fully visible on hover */
+    font-weight: 600;
+}
+
+/* Dropdown container */
+.dropdown {
+    position: relative;
+    display: inline-block;
+  }
+  
+  .dropbtn {
+    background-color: transparent;
+    border: none;
+    color: #ffffff; /* Button color */
+    font-weight: 500; /* Button font weight */
+    cursor: pointer;
+    padding: 10px 15px; /* Padding for dropdown button */
+  }
+  
+  /* Dropdown content */
+  .dropdown-content {
+    display: block;
+    position: absolute;
+    background-color: transparent; /* Semi-transparent background for dropdown */
+    backdrop-filter: blur(10px); /* Apply blur to dropdown */
+    min-width: 160px; /* Minimum width for dropdown */
+    z-index: 1; /* Ensure it appears above other elements */
+    border-radius: 10px; /* Rounded corners */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.632); /* Shadow for dropdown */
+  }
+  
+  .dropdown-content a {
+    color: #ffffff; /* Link color */
+    padding: 12px 16px; /* Padding for links */
+    text-decoration: none; /* No underline */
+    display: block; /* Links occupy full width */
+  }
+  
+  .dropdown-content a:hover {
+    background-color: rgba(40, 167, 70, 0.363); 
+    color: #00ff1a;
+  }
+  
+  
+  /* Right section styles */
+  .header-right {
+    display: flex;
+    align-items: center;
+  }
+  
+  .get-started-button {
+    padding: 10px 20px;
+    font-size: 16px;
+    background-color: #28a745; /* Button background color */
+    color: white; /* Button text color */
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+  }
+  
+  .get-started-button:hover {
+    background-color: #218838; /* Darker button color on hover */
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2); /* Add shadow effect */
+    transform: scale(1.05); /* Slightly scale up the button */
+    opacity: .7; /* Ensure it's fully visible on hover */
+}
+  
+  /* Responsive styles */
+  @media (max-width: 768px) {
+    .header {
+      flex-direction: column;
+      align-items:self-start;
+    }
+  
+    .header-center {
+      flex-wrap: wrap;
+      margin: 10px 0;
+    }
+  
+    .header-center a {
+      margin: 5px 0; /* Space between links on mobile */
+    }
+  
+    .header-left {
+      margin-bottom: 10px; /* Space below header-left on mobile */
+    }
+  
+    .title {
+      font-size: 20px; /* Smaller title size on mobile */
+    }
+  }
+  
+  @media (max-width: 480px) {
+    .logo {
+      width: 40px; /* Smaller logo size on extra small screens */
+    }
+  
+    .title {
+      font-size: 18px; /* Further reduced title size */
+    }
+  
+    .get-started-button {
+      font-size: 14px; /* Smaller button text on extra small screens */
+    }
+  }
+  
+
+.main-content {
+    display: flex;
+    flex-direction: column;
+    gap: 0px; /* Space between sections */
+}
+
+.section {
+    display: flex;
+    flex-direction: column; /* Stack children vertically */
+    justify-content: center; /* Center vertically */
+    align-items: center; /* Center horizontally */
+    min-height: 531px; /* Adjust as needed */
+    padding: 20px; /* Inner padding */
+}
+
+
+.section1 {
+    background-image: url('../pictures/sec.avif'); /* Adjust path */
+    background-size: cover;
+    background-position: center;
+    padding: 100px 20px; /* Keep increased padding */
+    color: white;
+    text-align: center;
+    position: relative; /* Establish positioning context */
+    margin-top: -50px; /* Pull section up to overlap header */
+    z-index: 5; /* Lower than header */
+}
+
+.section1 .title {
+    font-size: 48px; /* Adjust title font size */
+    margin: 0; /* Remove margin */
+    line-height: 1.2; /* Adjust line height for better readability */
+}
+
+.section1 .title span {
+    display: block; /* Stack each word on a new line */
+}
+
+.section1 .description {
+    font-size: 20px; /* Adjust description font size */
+    max-width: 800px; /* Limit the width for better readability */
+    margin: 20px auto; /* Center with margin on top and bottom */
+    line-height: 1.5; /* Adjust line height for better readability */
+    text-align: center; /* Center the description text */
+}
+
+.section2 {
+    display: flex; /* Use flexbox for layout */
+    justify-content: center; /* Center content */
+    padding: 20px; /* Inner padding */
+}
+
+.section-content {
+    display: flex; /* Arrange image and text in a row */
+    align-items: center; /* Center items vertically */
+    gap: 20px; /* Space between image and text */
+    width: 100%; /* Full width */
+    margin: 0; /* Ensure no extra margins */
+}
+
+.section-image {
+    min-width: 400px; /* Fixed width for consistency */
+    height: auto; /* Maintain aspect ratio */
+    width: auto;
+    border-radius: 8px; /* Optional: rounded corners */
+    margin-left: 20px; /* Adjust as needed */
+}
+
+.section-text {
+    max-width: 600px; /* Limit width for text */
+    text-align: left; /* Align text to the left */
+    margin-left: 20px; /* Adjust margin as needed */
+}
+
+.section-text h2 {
+    font-size: clamp(24px, 5vw, 38px); /* Responsive font size with min and max */
+    margin: 0 0 10px; /* Space below title */
+}
+
+.section-text p {
+    font-size: clamp(16px, 3vw, 20px); /* Responsive font size with min and max */
+    line-height: 1.5; /* Better readability */
+    margin: 0; /* Remove default margins */
+}
+
+.section3 {
+    position: relative; /* Establish positioning context */
+    display: flex;
+    flex-direction: column; /* Stack title and card container vertically */
+    align-items: center; /* Center align the content */
+    padding: 40px 20px; /* Inner padding */
+    overflow: hidden; /* Prevent overflow from blurred background */
+}
+
+.section3::before {
+    content: ''; /* Required for pseudo-element */
+    position: absolute; /* Position it absolutely */
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-image: url(../pictures/cardback.jpg); /* Adjust path */
+    background-size: cover; /* Cover the entire section */
+    background-position: center; /* Center the image */
+    filter: blur(2px); /* Adjust blur amount */
+    z-index: 0; /* Place behind other content */
+}
+
+.section3-title {
+    color: #f5f5f5;
+    font-size: clamp(24px, 5vw, 36px); /* Responsive title size */
+    margin-bottom: 20px; /* Space below title */
+    text-align: center; /* Center the title */
+    position: relative; /* Position title above the background */
+    z-index: 1; /* Ensure title is above the blurred background */
+}
+
+.card-container {
+    display: flex; /* Use flexbox for card layout */
+    justify-content: space-between; /* Space between cards */
+    gap: 20px; /* Space between individual cards */
+    width: 100%; /* Full width */
+    max-width: 1200px; /* Limit max width */
+    flex-wrap: wrap; /* Allow cards to wrap to the next line */
+}
+
+.card {
+    flex: 1; /* Allow cards to grow equally */
+    min-width: 250px; /* Minimum width for cards */
+    max-width: 300px; /* Maximum width for cards */
+    padding: 20px; /* Inner padding */
+    border: 0px solid rgba(221, 221, 221, 0.5); /* Light border with transparency */
+    border-radius: 8px; /* Rounded corners */
+    background-color: rgba(255, 255, 255, 0.498); /* White background with opacity */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Slight shadow for depth */
+    text-align: left; /* Align text to the left */
+    margin: 10px; /* Margin to add space around cards */
+    display: flex; /* Use flexbox in card */
+    flex-direction: column; /* Stack image and text vertically */
+    position: relative; /* Position above the blurred background */
+    z-index: 1; /* Ensure card content is above the background */
+}
+
+.card:hover {
+    transform: translateY(-5px); /* Move the card up slightly */
+    box-shadow: 0 4px 10px rgba(165, 195, 122, 0.699); /* Increase shadow on hover */
+}
+
+.card-image {
+    width: 100%; /* Full width of the card */
+    height: 200px; /* Fixed height for images */
+    object-fit: cover; /* Maintain aspect ratio */
+    border-radius: 8px 8px 0 0; /* Rounded corners for the top */
+}
+
+.card h3 {
+    font-size: 20px; /* Card title size */
+    margin: 10px 0; /* Space above and below title */
+    flex-shrink: 0; /* Prevent title from shrinking */
+}
+
+.card p {
+    font-size: 16px; /* Card description size */
+    line-height: 1.5; /* Better readability */
+    margin: 0; /* Remove default margins */
+    flex-grow: 1; /* Allow description to take available space */
+}
+
+/* Media queries for responsiveness */
+@media (max-width: 768px) {
+    .section3 {
+        padding: 20px; /* Adjust padding for smaller screens */
+    }
+
+    .card-container {
+        justify-content: center; /* Center cards in the container */
+    }
+
+    .card {
+        max-width: 100%; /* Allow cards to take full width on small screens */
+    }
+}
+
+.section4 {
+    display: flex;
+    flex-direction: column; /* Stack content vertically */
+    padding: 40px 20px; /* Inner padding */
+    background-color: #f9f9f9; /* Light background color for the section */
+}
+
+.section4-content {
+    display: flex; /* Use flexbox for layout */
+    align-items: flex-start; /* Align items to the top */
+    gap: 20px; /* Space between elements */
+    width: 100%; /* Ensure it takes the full width */
+    max-width: 1200px; /* Limit max width */
+    margin: 0 auto; /* Center the content */
+}
+
+.section4-text {
+    flex: 1; /* Allow text to grow */
+    display: flex;
+    flex-direction: column; /* Stack title and card container */
+}
+
+.section4-text h2 {
+    margin-top: 0;
+    font-size: clamp(24px, 5vw, 36px); /* Responsive title size */
+    margin-bottom: 20px; /* Space below title */
+    text-align: left; /* Align title to the left */
+}
+
+.card-container-section4 {
+    display: flex; /* Use flexbox for card layout */
+    flex-direction: column; /* Stack cards vertically */
+    gap: 15px; /* Space between individual cards */
+}
+
+.card-section4 {
+    display: flex; /* Use flexbox for layout */
+    align-items: center; /* Center items vertically */
+    padding: 10px; /* Inner padding */
+    border: 1px solid #ddd; /* Light border for the card */
+    border-radius: 8px; /* Rounded corners */
+    background-color: rgba(255, 255, 255, 0.8); /* White background with opacity */
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1); /* Slight shadow for depth */
+    width: 100%; /* Full width of the container */
+    max-width: 700px; /* Maximum width for cards */
+    min-height: 110px; /* Set a minimum height for cards */
+    text-align: left; /* Align text to the left */
+}
+
+.card-image-4 {
+    width: 70px; /* Smaller width for the image */
+    height: 70px; /* Smaller height for the image */
+    object-fit: cover; /* Maintain aspect ratio */
+    border-radius: 8px; /* Rounded corners */
+    margin-right: 10px; /* Space between image and text */
+}
+
+.card-section4 h3 {
+    font-size: 18px; /* Font size for the title */
+    margin: 0; /* Remove default margins */
+    min-width: 100px; /* Set a minimum width to align headers */
+    text-align: left; /* Ensure text aligns to the left */
+    flex-shrink: 0; /* Prevent header from shrinking */
+}
+
+.card-section4 p {
+    font-size: 14px; /* Font size for the description */
+    margin: 0; /* Remove default margins */
+    margin-top: 5px; /* Space above the paragraph */
+    line-height: 1.4; /* Line height for better readability */
+}
+
+.image-container {
+    margin-top: 74px; /* Maintain your desired top margin */
+    margin-left: auto; /* Center the container horizontally */
+    margin-right: auto; /* Center the container horizontally */
+    display: flex; /* Use flexbox */
+    justify-content: center; /* Center the image horizontally */
+    align-items: center; /* Center the image vertically */
+    width: 80%; /* Set width to a percentage for responsiveness */
+    max-width: 600px; /* Maximum width for larger screens */
+    height: auto; /* Set height to auto for responsiveness */
+    aspect-ratio: 3 / 2; /* Maintain a specific aspect ratio */
+    overflow: hidden; /* Hide overflow if necessary */
+    border: 1px solid #ddd; /* Optional: Border for visibility */
+    border-radius: 8px; /* Optional: Rounded corners */
+}
+
+.section4-large-image {
+    width: 100%; /* Make sure the image doesn't overflow */
+    height: 100%; /* Maintain aspect ratio within container */
+    object-fit: cover; /* Ensure the image covers the entire container */
+    margin: auto; /* Center the image */
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .image-container {
+        margin-top: 40px; /* Adjust top margin for smaller screens if needed */
+        width: 90%; /* Wider on smaller screens */
+    }
+}
+
+/* Responsive adjustments for larger screens */
+@media (min-width: 768px) {
+    .section4-content {
+        flex-direction: row; /* Align cards and large image in a row */
+    }
+
+    .section4-text {
+        margin-right: 20px; /* Add margin to the right of text section */
+    }
+}
+
+/* Responsive adjustments for smaller screens */
+@media (max-width: 768px) {
+    .section4-content {
+        flex-direction: column; /* Stack content vertically on small screens */
+    }
+}
+
+.section5 {
+    text-align: center;
+    padding: 40px 20px; /* Adjust as needed */
+    background-color: rgb(0, 0, 0);
+  }
+  
+.section5-title {
+    margin-top: 10px;
+    padding-bottom: 0px;
+    font-size: 40px;
+    letter-spacing: 3px;
+    word-spacing: 10px;
+    color: white; /* Change title color for better visibility */
+  }
+  
+.card-container-section5 {
+    display: flex;
+    justify-content: center; /* Center cards within the container */
+    flex-wrap: wrap; /* Allow wrapping to the next line */
+    gap: 20px; /* Space between cards */
+    position: relative; /* Position relative for child elements */
+}
+
+.card-section5 {
+    background-color: rgba(249, 249, 249, 0.2); /* Semi-transparent background for glass effect */
+    border: 1px solid rgba(255, 255, 255, 0.1); /* Light border for card */
+    border-radius: 20px; /* Rounded corners */
+    padding: 20px; /* Padding inside the card */
+    flex: 0 1 calc(25% - 20px); /* Responsive width for 4 cards per row */
+    max-width: 200px; /* Maximum width for each card */
+    box-shadow: 0 4px 10px rgba(177, 177, 177, 0.2); /* Slight shadow for depth */
+    transition: transform 0.2s, filter 0.3s; /* Smooth scale and filter on hover */
+    text-align: center; /* Center align text */
+    backdrop-filter: blur(10px); /* Blur effect for glassmorphism */
+}
+  
+  .card-image {
+    width: 100%; /* Make image take full width */
+    height: auto; /* Maintain aspect ratio */
+    border-radius: 4px; /* Rounded corners for images */
+    margin-bottom: 10px; /* Space between image and title */
+  }
+  
+/* Multi-color glow effect */
+@keyframes glow {
+    0% {
+        box-shadow: 0 0 5px rgba(255, 0, 255, 0.7), 0 0 10px rgba(255, 0, 255, 0.7);
+    }
+    25% {
+        box-shadow: 0 0 5px rgba(0, 255, 255, 0.7), 0 0 10px rgba(0, 255, 255, 0.7);
+    }
+    50% {
+        box-shadow: 0 0 5px rgba(0, 255, 0, 0.7), 0 0 10px rgba(0, 255, 0, 0.7);
+    }
+    75% {
+        box-shadow: 0 0 5px rgba(255, 255, 0, 0.7), 0 0 10px rgba(255, 255, 0, 0.7);
+    }
+    100% {
+        box-shadow: 0 0 5px rgba(255, 0, 255, 0.7), 0 0 10px rgba(255, 0, 255, 0.7);
+    }
+}
+
+.card-section5:hover {
+    transform: scale(1.05); /* Scale effect on hover */
+    animation: glow 1.5s infinite; /* Apply multi-color glow animation */
+}
+
+.card-container-section5 .card-section5:not(:hover) {
+    filter: brightness(0.7); /* Dim other cards */
+}
+
+.card-section5 h3, 
+.card-section5 p {
+    color: white; /* Change text color to white */
+}
+
+.footer {
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 20px;
+}
