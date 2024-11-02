@@ -201,7 +201,7 @@ body {
 }
 
 .know-your-food-container {
-  background-color: #567592;
+  background-color: #ffffff;
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -249,10 +249,10 @@ body {
   position: relative;
   width: auto;
   height: 780px;
-  background-color: #AFC6DB;
+  background-color: #0c005c;
 }
 .scan-smarter-text {
-  color: #1C3481;
+  color: #fcfdff;
   font-family: 'Geologica', sans-serif;
   font-size: xx-large;
   margin-top: 80px;
@@ -291,7 +291,7 @@ body {
 
 
 .how-scan-container {
-  background-color: #000;
+  background-color: #ffffff;
   display: flex;
   justify-content: space-between;
   align-items: center;
