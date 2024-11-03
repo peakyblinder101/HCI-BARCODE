@@ -1,5 +1,6 @@
 // Landingfirst.jsx
 import React, { useState } from 'react';
+import { useNavigate } from 'react-router-dom';
 import "../styles/LandingPage.css";
 import foodImage from '../assets/empower.jfif'; 
 import logo from '../assets/mainLogo.png';
@@ -15,6 +16,9 @@ import yt from '../assets/yt.png';
 import fb from '../assets/fb.png';
 import twitter from '../assets/twitter.png';
 import ig from '../assets/ig.png';
+import ann from '../assets/wigmore.jpg'
+import dostlogo from '../assets/dostlogo.png'
+import shopsmart from '../assets/shop-smart-background.jfif'
 
 function TeamMember({ image, name, role }) {
   const [isHovered, setIsHovered] = useState(false);
@@ -47,10 +51,24 @@ function TeamMember({ image, name, role }) {
 }
 
 const LandingPage = () => {
+  const navigate = useNavigate(); // Ensure this is defined
   const [isMenuOpen, setIsMenuOpen] = useState(false);
 
   const toggleMenu = () => {
     setIsMenuOpen(!isMenuOpen);
+  };
+
+  // Add handlers for the buttons
+  const handleLoginClick = () => {
+    navigate('/login');
+  };
+
+  const handleSignUpClick = () => {
+    navigate('/signup');
+  };
+
+  const handleGetStartedClick = () => {
+    navigate('/signup');
   };
 
   return (
@@ -72,8 +90,8 @@ const LandingPage = () => {
           <li><a href="#about-us">About Us</a></li>
         </ul>
         <div className="nav-buttons">
-          <button className="login-button">Login</button>
-          <button className="signup-button">Sign Up</button>
+          <button className="login-button" onClick={handleLoginClick}>Login</button>
+          <button className="signup-button" onClick={handleSignUpClick}>Sign Up</button>
         </div>
       </nav>
       
@@ -90,7 +108,7 @@ const LandingPage = () => {
             and personalize recommendations<br/>
             based on your dietary needs.
           </p>
-          <button className="get-started-button">Get Started</button>
+          <button className="get-started-button" onClick={handleGetStartedClick}>Get Started</button>
         </div>
         <div className="image-section">
           <img src={foodImage} alt="Empower your food choices" />
@@ -122,6 +140,7 @@ const LandingPage = () => {
             <li>
               <div className="form1">
                 <img src={barcode} alt="Barcode" />
+                  <button className= "features-button">features</button>
                 <h3>Barcode</h3>
                 <p>Real-time scanning of product barcodes to retrieve 
                   detailed nutritional and allergen information.
@@ -131,6 +150,7 @@ const LandingPage = () => {
             <li>
               <div className="form2">
                 <img src={diet} alt="Barcode" />
+                <button className= "features-button">features</button>
                 <h3>Dietary Profile</h3>
                 <p>Customize your dietary needs and restrictions for personalized 
                   product recommendations and allergen alerts.
@@ -140,6 +160,7 @@ const LandingPage = () => {
             <li>
               <div className="form3">
                 <img src={tips} alt="Barcode" />
+                <button className= "features-button">features</button>
                 <h3>Healthy Shopping Tips</h3>
                 <p>Essential Tips for Navigating Food Allergies and 
                   Making Healthy Choices.
@@ -187,6 +208,60 @@ const LandingPage = () => {
           <img src={howScan} alt="image" />
         </div>
       </div>
+
+      <div className="healty-shopping-tips-container">
+        <div className="healty-shopping-tips-text">
+          <h2>Healthy shopping tips from reputable sources</h2>
+          <p>
+            "The food you eat can be either the safest and most powerful form of<br/>
+            medicine or the slowest form of poison" - Ann Wigmore
+          </p>
+        </div>
+        <div>
+          <ul className="form-info-healty-tips">
+            <li>
+              <div className="form-info-healty-tips-left">
+                <img src={ann} alt="Ann" />
+                <h3>Ann Wigmore</h3>
+                <p>
+                  founded the Ann Wigmore Natural<br/>
+                  Health Institute Inc.
+                </p>
+              </div>
+            </li>
+            <li>
+              <div className="form-info-healty-tips-right">
+                <h2>
+                  "There is no single food that<br/>
+                  contains all the nutrients that<br/>
+                  our body needs so eating a<br/>
+                  variety of food ensures that<br/> 
+                  daily nutritional needs are<br/>
+                  met."
+                </h2>
+                <div className="dost-container">
+                <img src={dostlogo} alt="Dostlogo" />
+                <p>
+                  DOST - Food and Nutrition<br/>
+                  Research Institute
+                </p>
+                </div>
+              </div>
+            </li>
+          </ul>
+        </div>
+      </div>
+
+      <div className="shop-smart-container">
+      <div className="shopsmart-image-container">
+              <img src={shopsmart} alt="ShopSmart" />
+          </div>
+      <div className="shop-smart-text">
+          <h2>Shop Smart Now</h2>
+          <button className="get-started-button" onClick={handleGetStartedClick}>Get Started</button>
+          
+      </div>
+  </div>
 
 
       <div className="other-container">
