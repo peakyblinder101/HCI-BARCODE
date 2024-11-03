@@ -1,0 +1,96 @@
+/*Signup.css*/
+
+/*
+add container-sig class name here, and copy 
+the format style LoginSignup.css
+*/
+
+.signup-container {
+  position: absolute; /* Use absolute positioning */
+  top: 50%; /* Center vertically */
+  left: 50%; /* Center horizontally */
+  transform: translate(-50%, -50%); /* Offset to truly center */
+  width: auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  backdrop-filter: blur(20px);
+  background: radial-gradient(circle, rgba(238,174,202,0.216) 19%, rgba(148,187,233,0.194) 73%);
+  padding: 40px;
+  box-sizing: border-box;
+}
+
+.form-row {
+  display: flex;
+  justify-content: space-between; /* Space out the fields evenly */
+  width: 100%; /* Ensure full width */
+  margin-bottom: 15px; /* Space between rows */
+}
+
+.form-group {
+  flex: 1; /* Allow fields to take equal space */
+  margin-right: 10px; /* Space between two form groups */
+}
+
+.form-group:last-child {
+  margin-right: 0; /* Remove margin for the last item in the row */
+}
+
+label {
+  display: block;
+  margin-bottom: 5px;
+}
+
+input, select, button {
+  width: 100%;
+  padding: 8px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+}
+
+.password-container {
+  display: flex;
+  align-items: center;
+}
+
+.password-container span {
+  cursor: pointer;
+  margin-left: 8px;
+}
+
+input[type="email"] {
+  width: 100%; /* Make input take full width */
+  padding: 8px; /* Consistent padding */
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box; /* Ensure padding is included in width */
+}
+
+button {
+  padding: 10px;
+  background-color: #28a745;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: #218838;
+}
+
+.switch {
+  text-align: center; /* Centers the text horizontally */
+  margin-top: 20px; /* Adds some space above the text */
+  cursor: pointer; /* Changes cursor to indicate it's clickable */
+  width: 100%; /* Ensures it takes full width of the parent */
+}
+
+
+.error-message {
+  color: red;
+  margin-top: 10px;
+  font-size: 14px;
+}

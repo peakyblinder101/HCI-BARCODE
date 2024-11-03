@@ -1,0 +1,79 @@
+/* LoginSignup.css */
+
+/*
+add container-log class name here, and copy 
+the format style LoginSignup.css
+*/
+
+.login-container {
+  position: absolute; /* Use absolute positioning */
+  top: 50%; /* Center vertically */
+  left: 50%; /* Center horizontally */
+  transform: translate(-50%, -50%); /* Offset to truly center */
+  width: auto;
+  min-width: 450px; /* Set a min-width to limit the container size */
+  display: flex;
+  flex-direction: column; 
+  align-items: center; /* Center contents horizontally */
+  padding: 40px;
+  backdrop-filter: blur(20px);
+  background: rgb(174, 238, 208);
+  background: radial-gradient(circle, rgba(217, 174, 238, 0.217) 19%, rgba(148, 233, 199, 0.194) 73%);
+  box-sizing: border-box;
+}
+
+.form-group {
+  margin-bottom: 15px;
+  width: 100%; /* Ensure form groups take full width */
+}
+
+label {
+  display: block;
+  margin-bottom: 5px;
+}
+
+input {
+  min-width: 300px;
+  width: auto;
+  padding: 10px 40px 10px 10px; /* Add padding for icon space */
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box; /* Include padding in width */
+}
+
+.password-container {
+  position: relative; /* Allow absolute positioning of the icon */
+}
+
+.password-container span {
+  position: absolute; /* Position the icon absolutely */
+  right: 15px; /* Adjust the distance from the right edge */
+  top: 50%; /* Center vertically */
+  transform: translateY(-50%); /* Align icon vertically in the middle */
+  cursor: pointer; /* Change cursor to pointer */
+  color: #666; /* Optional: Change icon color */
+}
+
+button {
+  width: 100%;
+  padding: 10px;
+  background-color: #28a745;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: #6bf088ab;
+}
+
+.switch {
+  margin-top: 15px; /* Space above the switch text */
+  cursor: pointer; /* Change cursor to pointer for interactivity */
+}
+
+.link {
+  color: #007bff; /* Link color */
+  text-decoration: underline; /* Underline link */
+}
